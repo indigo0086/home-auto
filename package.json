@@ -1,0 +1,19 @@
+{
+  "name": "home-auto",
+  "version": "1.0.0",
+  "description": "Home automation server and interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indigo0086/home-auto.git"
+  },
+  "author": "Daniel Pritchett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indigo0086/home-auto/issues"
+  },
+  "homepage": "https://github.com/indigo0086/home-auto"
+}
