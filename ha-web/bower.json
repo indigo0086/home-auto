@@ -1,0 +1,23 @@
+{
+  "name": "home-auto",
+  "version": "0.0.1",
+  "homepage": "https://github.com/indigo0086/home-auto",
+  "authors": [
+    "Daniel Pritchett <indigo0086@gmail.com>"
+  ],
+  "description": "Home Automation Interface",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "materialize": "~0.96.1",
+    "foundation": "~5.5.2"
+  }
+}
