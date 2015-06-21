@@ -1,4 +1,6 @@
-var React = require('react');
+'use strict';
+
+var React = require('react/addons');
 var TempController = require('./tempController.jsx');
 
 var ControllerContainer = React.createClass({
