@@ -1,9 +1,8 @@
 var React = require('react');
 console.log(React);
-var TempController = require('./components/tempController.jsx');
+var ControllerContainer = require('./components/controllerContainer.jsx');
 
 React.render(
-  <TempController />,
-  document.getElementById('controllerCotainer')
+  <ControllerContainer source='monitor.json'/>,
+  document.getElementById('controllerContainer')
 );
-

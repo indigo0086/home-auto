@@ -1,11 +1,14 @@
 var React = require('react');
 
 var TempController = React.createClass({
-  render: function () {
+  getInitialState: function() {
+    return {temp: 0}
+  },
+  render: function() {
     return (
-      <div class="tempController">
-        <label>Temperature:</label>
-        <input type="text" placeholder="Temperature"/>
+      <div className="small-4 column tempController">
+        <label id={this.props.id + 'label'} htmlFor={this.props.id}>Temperature:</label>
+        <input id={this.props.id} type="text" placeholder="Temperature" value={this.state.temp}/>
       </div>
     )
   }

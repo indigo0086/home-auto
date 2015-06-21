@@ -11,7 +11,7 @@ gulp.task('browserify', function () {
     debug: true,
     cache: {}, packageCache: {}, fullPaths: true
   });
-  var watcher = watchify(bundler);
+  var watcher = watchify(bundler, {delay: 300});
 
   return watcher
     .on('update', function () { // When any files update
