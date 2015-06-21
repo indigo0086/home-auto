@@ -9,15 +9,19 @@ describe('TempController', function() {
     var TempController = require('./tempController.jsx');
     var utils = React.addons.TestUtils;
 
-    var tempController = utils.renderIntoDocument(
-      <TempController id="test"/>
+    var testData = {
+      temperature: 12
+    };
+    var testControl = utils.renderIntoDocument(
+      <TempController id="test" data={testData} />
     );
 
-    var label = utils.findRenderedDOMComponentWithTag(tempController, 'label');
+    var label = utils.findRenderedDOMComponentWithTag(testControl, 'label');
     label.props.id.should.equal('testLabel');
     label.props.htmlFor.should.equal('test');
 
-    var textBox = utils.findRenderedDOMComponentWithTag(tempController, 'input');
+    var textBox = utils.findRenderedDOMComponentWithTag(testControl, 'input');
     textBox.props.id.should.equal('test');
-  })
+    textBox.props.value.should.equal(12);
+  });
 });

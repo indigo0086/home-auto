@@ -5,7 +5,7 @@ var ControllerContainer = require('./components/controllerContainer.jsx');
 
 function run(){
   React.render(
-    <ControllerContainer url='monitor.json'/>,
+    <ControllerContainer url='server-data.json' pollInterval={2000}/>,
     document.getElementById('controllerContainer')
   );
 }

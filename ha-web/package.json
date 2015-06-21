@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "react": "^0.13.3",
-    "react-tools": "^0.13.3"
+    "react-tools": "^0.13.3",
+    "then-request": "^2.1.1"
   }
 }

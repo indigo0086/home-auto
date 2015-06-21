@@ -1,0 +1,10 @@
+{
+  "status": "online",
+  "devices": {
+    "thermostat": {
+      "location": "central",
+      "temperature": 76,
+      "units": "C"
+    }
+  }
+}
