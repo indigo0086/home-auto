@@ -5,16 +5,10 @@ var jf = Promise.promisifyAll(require('jsonfile'));
 var serverData =
 {
   status: 'online',
-  devices: {
-    thermostat: {
-      location: 'central',
-      temperature: 76,
-      units: 'C'
-    },
-    kitchenLights: true,
-    bathroomLights: false,
-    livingRoomLights: true
-  }
+  thermostat: 76,
+  kitchenLights: true,
+  bathroomLights: false,
+  livingRoomLights: true
 };
 
 //Enable CORS
@@ -32,8 +26,9 @@ app.get('/values', function(req, res) {
     .send(serverData);
 });
 
-app.post('/values', function(req, res) {
-
+app.post('/values/:key/:value', function(req, res) {
+  serverData[req.params.key] = req.params.value;
+  console.log('Server data updated: %o', serverData);
 });
 
 app.listen(8088, function() {
