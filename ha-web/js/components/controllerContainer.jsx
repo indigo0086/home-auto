@@ -43,9 +43,9 @@ var ControllerContainer = React.createClass({
 
         <div className="small-block-grid-3">
           <TempController id="thermostat" data={devices.thermostat}/>
-          <LightsController id="kitchenLights" room="Kitchen" status={devices.lights.kitchen}/>
-          <LightsController id="bathroomLights" room="Bathroom" status={devices.lights.bathroom}/>
-          <LightsController id="livingRoomLights" room="Living-Room" status={devices.lights.livingRoom}/>
+          <LightsController id="kitchenLights" room="Kitchen" status={devices.kitchenLights}/>
+          <LightsController id="bathroomLights" room="Bathroom" status={devices.bathroomLights}/>
+          <LightsController id="livingRoomLights" room="Living-Room" status={devices.livingRoomLights}/>
         </div>
       </div>
     )

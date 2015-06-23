@@ -10,10 +10,14 @@ Ensure you have the necessary packages by running the commands:
     npm install -g karma
 
 To initialize application
+
     npm install
 
 To run Tests
+
     npm test
     
 To Start application
+
     npm start
+    
