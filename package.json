@@ -4,7 +4,9 @@
   "description": "Home automation server and interface",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "cd ha-web && karma start",
+    "postinstall": "cd ha-web && npm install && bower install",
+    "start": "node server.js & cd ha-web && gulp"
   },
   "repository": {
     "type": "git",
