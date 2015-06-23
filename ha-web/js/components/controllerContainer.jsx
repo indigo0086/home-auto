@@ -3,7 +3,8 @@
 var request = require('then-request');
 var React = require('react/addons');
 var TempController = require('./tempController.jsx');
-var ServerStatus = require('./ServerStatus.jsx')
+var LightsController = require('./lightsController.jsx');
+var ServerStatus = require('./ServerStatus.jsx');
 
 var ControllerContainer = React.createClass({
   loadServerData: function() {
@@ -19,7 +20,12 @@ var ControllerContainer = React.createClass({
       data: {
         status: 'offline',
         devices: {
-          thermostat: {temperature: 0}
+          thermostat: {temperature: 0},
+          lights: {
+            kitchen: true,
+            bathroom: false,
+            livingRoom: true
+          }
         }
       }
     }
@@ -34,8 +40,12 @@ var ControllerContainer = React.createClass({
     return (
       <div>
         <h1><ServerStatus status={data.status}/></h1>
+
         <div className="small-block-grid-3">
-          <TempController id="controller1" data={devices.thermostat}/>
+          <TempController id="thermostat" data={devices.thermostat}/>
+          <LightsController id="kitchenLights" room="Kitchen" status={devices.lights.kitchen}/>
+          <LightsController id="bathroomLights" room="Bathroom" status={devices.lights.bathroom}/>
+          <LightsController id="livingRoomLights" room="Living-Room" status={devices.lights.livingRoom}/>
         </div>
       </div>
     )

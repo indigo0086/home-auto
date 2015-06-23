@@ -5,6 +5,11 @@
       "location": "central",
       "temperature": 76,
       "units": "C"
+    },
+    "lights": {
+      "kitchen": true,
+      "bathroom": false,
+      "livingRoom": true
     }
   }
 }

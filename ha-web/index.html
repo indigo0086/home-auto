@@ -6,16 +6,37 @@
   <meta name="viewport" content="width=device-width initial-scale=1.0"/>
   <link rel="stylesheet" href="bower_components/foundation/css/normalize.css"/>
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
 
-<div id="controllerContainer">
+<!--Top Nav-->
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Home Automation</a></h1>
+    </li>
+  </ul>
+</nav>
+
+<!--Banner-->
+<div class="row full-width">
+  <div class="large-12 columns top-banner">
+    <h1>Welcome to your home</h1>
+  </div>
+</div>
+<!--Controls-->
+<div class="row">
+  <div class="small-3 large-2 columns">&nbsp</div>
+  <div class="small-6 large-8 columns">
+    <div id="controllerContainer">
+    </div>
+  </div>
+  <div class="small-3 large-3 columns">&nbsp</div>
 </div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>
-<!--<script src="bower_components/react/react.min.js"></script>-->
-<!--<script src="bower_components/react/JSXTransformer.js"></script>-->
 <script src="dist/bundle.js"></script>
 
 </body>
