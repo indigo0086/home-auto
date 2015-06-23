@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var connect = require('gulp-connect');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
@@ -11,6 +12,7 @@ gulp.task('browserify', function () {
     debug: true,
     cache: {}, packageCache: {}, fullPaths: true
   });
+
   var watcher = watchify(bundler, {delay: 300});
 
   return watcher
@@ -29,5 +31,9 @@ gulp.task('browserify', function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-
-gulp.task('default', ['browserify']);
+gulp.task('web-server', function(){
+  connect.server({
+    port:8089
+  });
+});
+gulp.task('default', ['browserify', 'web-server']);
