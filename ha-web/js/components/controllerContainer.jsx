@@ -32,7 +32,7 @@ var ControllerContainer = React.createClass({
   },
   componentDidMount: function() {
     this.loadServerData();
-    setInterval(this.loadServerData, this.props.pollInterval);
+    //setInterval(this.loadServerData, this.props.pollInterval);
   },
   render: function() {
     var data = this.state.data;

@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/indigo0086/home-auto/issues"
   },
-  "homepage": "https://github.com/indigo0086/home-auto"
+  "homepage": "https://github.com/indigo0086/home-auto",
+  "dependencies": {
+    "bluebird": "^2.9.30",
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
+    "jsonfile": "^2.1.2"
+  }
 }
